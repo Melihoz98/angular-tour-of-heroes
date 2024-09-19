@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { ImageUploadComponent } from './image-upload/image-upload.component';
+import { ImageUploadService } from './services/image-upload.service'; // Correct path after moving the service
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImageUploadComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ImageUploadService], // Ensure the service is provided here
   bootstrap: [AppComponent]
 })
 export class AppModule { }

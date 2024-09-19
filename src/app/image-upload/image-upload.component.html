@@ -1,0 +1,12 @@
+<div class="upload-container">
+    <h2>Handwritten Document Digitizer</h2>
+    <div class="upload-box">
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" id="fileInput" />
+      <label for="fileInput" class="upload-label">
+        Choose an Image
+      </label>
+    </div>
+    
+    <button class="submit-button" [disabled]="!selectedFile" (click)="onUpload()">Upload Image</button>
+  </div>
+  
